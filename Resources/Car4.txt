@@ -1,0 +1,7 @@
+name: +Bob Eubanks Car+
+handle_s: +.15f+
+handle_c: +.20f+
+handle_u: +.03f+
+top_speed: +.9f+
+acceleration: +.21f+
+symbol: -D-

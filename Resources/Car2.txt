@@ -1,0 +1,7 @@
+name: +Pat Sajak Car+
+handle_s: +.45f+
+handle_c: +.65f+
+handle_u: +.3f+
+top_speed: +.75f+
+acceleration: +.08f+
+symbol: -P-

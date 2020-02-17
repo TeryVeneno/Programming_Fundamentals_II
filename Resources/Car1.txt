@@ -1,0 +1,7 @@
+name: +Bob Barker Car+
+handle_s: +.30f+
+handle_c: +.65f+
+handle_u: +.1f+
+top_speed: +.95f+
+acceleration: +.11f+
+symbol: -1-

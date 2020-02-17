@@ -1,0 +1,7 @@
+name: +Steve Harvey Car+
+handle_s: +.20f+
+handle_c: +.22f+
+handle_u: +.05f+
+top_speed: +.92f+
+acceleration: +.19f+
+symbol: -H-

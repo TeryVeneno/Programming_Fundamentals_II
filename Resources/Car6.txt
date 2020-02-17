@@ -1,0 +1,7 @@
+name: +Richard Dawson Car+
+handle_s: +.40f+
+handle_c: +.5f+
+handle_u: +.35f+
+top_speed: +.675f+
+acceleration: +.19f+
+symbol: -R-

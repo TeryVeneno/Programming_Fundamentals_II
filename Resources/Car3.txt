@@ -1,0 +1,7 @@
+name: +Alex Trebek Car+
+handle_s: +.29f+
+handle_c: +.55f+
+handle_u: +.02f+
+top_speed: +.83f+
+acceleration: +.19f+
+symbol: -A-
