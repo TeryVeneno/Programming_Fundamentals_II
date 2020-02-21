@@ -1,5 +1,7 @@
 package course.labs.Lab4;
 
+// Class Made By: Simon
+
 public class Worker {
 
     private TimeCard time_card;
@@ -9,9 +11,10 @@ public class Worker {
     private String address;
 
 
-    public Worker (float salary, String type, String name, String address) {
+    public Worker (Equipment e, float salary, String type, String name, String address) {
         // create time_card, salary
         time_card = new TimeCard();
+        equipment = e;
         this.type = type;
         this.name = name;
         this.address = address;
@@ -23,9 +26,6 @@ public class Worker {
         return 0;
     }
 
-    public void set_equipment (Equipment e) {
-        equipment = e;
-    }
 
     public String get_name () {
         return name;
