@@ -1,5 +1,7 @@
 package course.labs.Lab4;
 
+//Class Made By: Ajelet && Milad
+
 public class Equipment {
 	private boolean morning, afternoon, evening;
 	private float cost;
@@ -15,33 +17,32 @@ public class Equipment {
 		cost = c;
 		
 	}
-public boolean morning() 
+	public boolean morning()
+		{
+			return morning;
+		}
+	public boolean afternoon ()
+		{
+			return afternoon;
+		}
+	public boolean evening ()
+		{
+			return evening;
+		}
+	public float get_cost ()
+		{
+			return cost;
+		}
+	public String type ()
+		{
+		return type;
+		}
+	public void  setworker(Worker w)
 	{
-		return morning;
+	  worker = w;
 	}
-public boolean afternoon ()
+	public Worker getworker ()
 	{
-		return afternoon;
+		return worker;
 	}
-public boolean evening ()
-	{
-		return evening;
-	}
-public float get_cost ()
-	{
-		return cost;
-	}
-public String type ()
-	{
-	return type;
-	
-}
-public void  setworker(Worker w)
-{
-  worker = w;	
-}
-public Worker getworker ()
-{
-	return worker;
-}
 }

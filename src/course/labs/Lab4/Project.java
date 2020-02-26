@@ -19,6 +19,10 @@ public class Project {
         requirements.add(r);
     }
 
+    public String get_name () {
+        return name;
+    }
+
     public Requirement get_requirement () {
         if (internal_index < requirements.size())
             internal_index++;
@@ -43,6 +47,9 @@ public class Project {
 
     // Change calculations to show shifts
     public int length () {
-        return requirements.size();
+        int ret = 0;
+        for (Requirement r : requirements)
+            ret += r.get_length();
+        return ret;
     }
 }

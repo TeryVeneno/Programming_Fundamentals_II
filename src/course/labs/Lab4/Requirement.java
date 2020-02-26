@@ -51,4 +51,11 @@ public class Requirement {
         }
        return ret;
     }
+
+    public int get_length () {
+        int ret = 0;
+        for (SubRequirement r : subrequirements)
+            ret += r.get_shifts();
+        return ret;
+    }
 }

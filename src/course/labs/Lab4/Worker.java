@@ -13,7 +13,7 @@ public class Worker {
 
     public Worker (Equipment e, float salary, String type, String name, String address) {
         // create time_card, salary
-        time_card = new TimeCard();
+        time_card = new TimeCard(salary);
         equipment = e;
         this.type = type;
         this.name = name;
@@ -21,11 +21,17 @@ public class Worker {
     }
 
     // To be finished
-    public float get_salary (int shifts) {
-        // time_card method returns salary based on number of shifts
-        return 0;
+    public float get_salary () {
+        return time_card.getSalary();
     }
 
+    public boolean is_working () {
+        return time_card.isworking();
+    }
+
+    public void set_working (boolean w) {
+        // set timecard working to true or false
+    }
 
     public String get_name () {
         return name;

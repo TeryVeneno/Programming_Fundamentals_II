@@ -1,37 +1,38 @@
 package course.labs.Lab4;
 
-public class TimeCard {
-	
+// Class Made By: Mateilda
 
-	  private boolean isworking;
-	   private ArrayList<Shift> shifts = new ArrayList<>();
+import java.util.ArrayList;
+
+public class TimeCard {
+
+	private boolean isworking;
+	private ArrayList<Shift> shifts = new ArrayList<>();
 	   
-	   private float salary;
+	private float salary;
 	   
-	   public TimeCard(float salary)
-	   	   {
-		this.salary=salary;
-	   	   }
-	   
-	   public float getSalary() 
+   public TimeCard(float salary)
 	   {
-		   return shifts.size()*salary;
+	this.salary=salary;
 	   }
-	   
-	   public boolean isworking()
-	   {
-		   return isworking;
-	   }
-	   
-	   public void setWorking(boolean a)
-	   {
-		   isworking=a;
-	   }
-	   
-	   public void addShift(String projectname, int time)
-	   {
-		   shifts.add(new Shift(projectname,time))
-	   }
-	  
+
+   public float getSalary()
+   {
+	   return shifts.size()*salary;
+   }
+
+   public boolean isworking()
+   {
+	   return isworking;
+   }
+
+   public void setWorking(boolean a)
+   {
+	   isworking=a;
+   }
+
+   public void addShift(String projectname, int time)
+   {
+	   shifts.add(new Shift(projectname,time));
    }
 }
