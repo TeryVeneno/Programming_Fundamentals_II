@@ -33,6 +33,5 @@ public class TimeCard {
 		   shifts.add(new Shift(projectname,time))
 	   }
 	  
-	  
    }
 }
