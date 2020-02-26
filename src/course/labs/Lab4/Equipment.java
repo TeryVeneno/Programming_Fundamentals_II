@@ -1,17 +1,18 @@
+package course.labs.Lab4;
 
-public class equipment1 {
+public class Equipment {
 	private boolean morning, afternoon, evening;
-	private float salary;
+	private float cost;
 	private String type;
 	private Worker worker;
 	
-	public equipment1 (float s, String t, boolean m, boolean a, boolean e)
+	public Equipment (float c, String t, boolean m, boolean a, boolean e)
 	{
 		morning = m;
 		afternoon = a;
 		evening = e;
 		type = t;
-		salary = s;
+		cost = c;
 		
 	}
 public boolean morning() 
@@ -20,16 +21,15 @@ public boolean morning()
 	}
 public boolean afternoon ()
 	{
-	return afternoon;
+		return afternoon;
 	}
 public boolean evening ()
 	{
-	
-	return evening;
+		return evening;
 	}
-public float salary ()
+public float get_cost ()
 	{
-	return salary;
+		return cost;
 	}
 public String type ()
 	{
@@ -40,8 +40,8 @@ public void  setworker(Worker w)
 {
   worker = w;	
 }
-public Worker getworker;
+public Worker getworker ()
 {
-	worker= w;
+	return worker;
 }
 }
