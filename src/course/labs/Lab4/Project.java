@@ -7,10 +7,12 @@ import java.util.ArrayList;
 public class Project {
     private ArrayList<Requirement> requirements;
     private int internal_index;
+    String name;
 
-    public Project () {
+    public Project (String name) {
         requirements = new ArrayList<>();
         internal_index = 0;
+        this.name = name;
     }
 
     public void add_requirement (Requirement r) {
@@ -37,5 +39,10 @@ public class Project {
             ret.add(new Requirement(requirement));
         }
         return ret;
+    }
+
+    // Change calculations to show shifts
+    public int length () {
+        return requirements.size();
     }
 }
