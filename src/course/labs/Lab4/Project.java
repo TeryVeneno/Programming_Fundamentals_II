@@ -3,20 +3,18 @@ package course.labs.Lab4;
 // Class Made By: Everyone
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Project {
     private ArrayList<Requirement> requirements;
     private int internal_index;
     String name;
 
-    public Project (String name) {
+    public Project (String name, Requirement[] r) {
         requirements = new ArrayList<>();
         internal_index = 0;
         this.name = name;
-    }
-
-    public void add_requirement (Requirement r) {
-        requirements.add(r);
+        requirements.addAll(Arrays.asList(r));
     }
 
     public String get_name () {
@@ -51,5 +49,20 @@ public class Project {
         for (Requirement r : requirements)
             ret += r.get_length();
         return ret;
+    }
+
+    public void update_requirements () {
+        for (int i = 0; i < requirements.size(); i++)
+            if (requirements.get(i).fulfilled()) {
+                if (internal_index > i)
+                    internal_index--;
+                requirements.remove(i);
+            }
+    }
+
+    public boolean fulfilled () {
+        if (requirements.size() == 0)
+            return true;
+        return false;
     }
 }

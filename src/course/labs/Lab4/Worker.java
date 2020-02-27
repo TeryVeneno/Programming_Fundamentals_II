@@ -11,17 +11,20 @@ public class Worker {
     private String address;
 
 
-    public Worker (Equipment e, float salary, String type, String name, String address) {
+    public Worker (Equipment e, String name, String address) {
         // create time_card, salary
-        time_card = new TimeCard(salary);
+        time_card = new TimeCard(e.get_cost());
         equipment = e;
-        this.type = type;
+        type = e.get_type();
         this.name = name;
         this.address = address;
+        e.setworker(this);
     }
 
     // To be finished
     public float get_salary () {
+        if (equipment.get_type() == "electrician" && equipment.get_shifts_worked() == 2)
+            return time_card.getSalary()+100;
         return time_card.getSalary();
     }
 
@@ -47,5 +50,9 @@ public class Worker {
 
     public Equipment get_equipment () {
         return equipment;
+    }
+
+    public void add_shift (String projectname, int time) {
+        time_card.addShift(projectname, time);
     }
 }

@@ -3,39 +3,45 @@ package course.labs.Lab4;
 //Class Made By: Ajelet && Milad
 
 public class Equipment {
-	private boolean morning, afternoon, evening;
-	private float cost;
+	private int[] can_work;
+	private int cost;
 	private String type;
 	private Worker worker;
-	
-	public Equipment (float c, String t, boolean m, boolean a, boolean e)
+	private int workable_shifts;
+	private int shifts_worked = 0;
+
+	public Equipment (int c, String t, int m, int a, int e, int ws)
 	{
-		morning = m;
-		afternoon = a;
-		evening = e;
+		can_work = new int[]{m,a,e};
 		type = t;
 		cost = c;
-		
+		workable_shifts = ws;
 	}
-	public boolean morning()
+	public Equipment (int c, String t, int m, int a, int e)
 		{
-			return morning;
+			this (c, t, m, a, e, 3);
 		}
-	public boolean afternoon ()
+	public boolean get_can_work (int shift_time)
 		{
-			return afternoon;
+			if (can_work[shift_time] == 1)
+				return true;
+			return false;
 		}
-	public boolean evening ()
-		{
-			return evening;
-		}
-	public float get_cost ()
+	public int get_cost ()
 		{
 			return cost;
 		}
-	public String type ()
+	public String get_type ()
 		{
 		return type;
+		}
+	public int get_shifts_worked ()
+		{
+			return shifts_worked;
+		}
+	public int get_workable_shifts ()
+		{
+			return workable_shifts;
 		}
 	public void  setworker(Worker w)
 	{
@@ -45,4 +51,12 @@ public class Equipment {
 	{
 		return worker;
 	}
+	public void reset_shifts_worked ()
+		{
+			shifts_worked = 0;
+		}
+	public void increase_shifts_worked ()
+		{
+			shifts_worked++;
+		}
 }

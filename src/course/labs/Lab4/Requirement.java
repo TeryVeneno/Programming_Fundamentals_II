@@ -3,9 +3,7 @@ package course.labs.Lab4;
 // Class Made By: Everyone
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-@SuppressWarnings("CopyConstructorMissesField")
 public class Requirement {
 
     private ArrayList<SubRequirement> subrequirements;
@@ -20,6 +18,11 @@ public class Requirement {
         for (SubRequirement subreq : subreqs) {
             subrequirements.add(new SubRequirement(subreq));
         }
+    }
+
+    public Requirement (SubRequirement r) {
+        subrequirements = new ArrayList<>();
+        subrequirements.add(r);
     }
 
     public Requirement (Requirement r) {
@@ -56,6 +59,14 @@ public class Requirement {
         int ret = 0;
         for (SubRequirement r : subrequirements)
             ret += r.get_shifts();
+        return ret;
+    }
+
+    public boolean fulfilled () {
+        boolean ret = true;
+        for (SubRequirement r : subrequirements)
+            if (!r.fulfilled())
+                ret = false;
         return ret;
     }
 }
