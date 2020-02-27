@@ -3,6 +3,8 @@ package course.labs.Lab4;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+// Class Made By: Simon && Mateilda && Ajelet
+
 public class ConstructionTeam {
     private Project project;
     private ArrayList<Equipment> equipments;

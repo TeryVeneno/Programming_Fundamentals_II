@@ -2,6 +2,8 @@ package course.labs.Lab4;
 
 import java.util.ArrayList;
 
+// Class Made By: Everyone
+
 public class Foreman {
     private ArrayList<ConstructionTeam> teams = new ArrayList<>();
     private Management management;

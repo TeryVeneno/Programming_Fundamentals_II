@@ -1,5 +1,7 @@
 package course.labs.Lab4;
 
+// Class Made By: Simon
+
 public class Shift {
     public final String project_name;
     public final int shift;
