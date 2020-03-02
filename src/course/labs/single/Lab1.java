@@ -1,4 +1,4 @@
-package course.labs;
+package course.labs.single;
 
 public class Lab1 {
 

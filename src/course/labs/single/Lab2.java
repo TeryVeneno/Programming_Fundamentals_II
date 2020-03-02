@@ -1,4 +1,4 @@
-/*package course.labs;
+package course.labs.single;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -34,13 +34,13 @@ public class Lab2 {
     // Main
     public static void main(String[] args) throws InterruptedException {
         // Car Setup
-        Car[] cars = new Car[6];
-        cars[0] = new Car("Resources/Car1.txt");
-        cars[1] = new Car("Resources/Car2.txt");
-        cars[2] = new Car("Resources/Car3.txt");
-        cars[3] = new Car("Resources/Car4.txt");
-        cars[4] = new Car("Resources/Car5.txt");
-        cars[5] = new Car("Resources/Car6.txt");
+        car[] cars = new car[6];
+        cars[0] = new car("Resources/Car1.txt");
+        cars[1] = new car("Resources/Car2.txt");
+        cars[2] = new car("Resources/Car3.txt");
+        cars[3] = new car("Resources/Car4.txt");
+        cars[4] = new car("Resources/Car5.txt");
+        cars[5] = new car("Resources/Car6.txt");
 
         // Race Setup
         String racetrack = "";
@@ -150,7 +150,7 @@ public class Lab2 {
 }
 
 // Car class
-class Car {
+class car {
 
     // Variables
     private String name;
@@ -165,7 +165,7 @@ class Car {
     private int race_wins = 0;
 
     // Constructor, gets info from a file
-    Car (String file_name) {
+    car (String file_name) {
         read_file(file_name);
     }
 
@@ -293,4 +293,4 @@ class Car {
         race_progress = 0;
     }
 
-}*/
+}

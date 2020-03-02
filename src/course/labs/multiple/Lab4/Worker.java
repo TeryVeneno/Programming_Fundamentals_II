@@ -1,4 +1,4 @@
-package course.labs.Lab4;
+package course.labs.multiple.Lab4;
 
 // Class Made By: Simon
 

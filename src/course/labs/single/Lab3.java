@@ -1,4 +1,4 @@
-package course.labs;
+package course.labs.single;
 
 import java.util.Random;
 
