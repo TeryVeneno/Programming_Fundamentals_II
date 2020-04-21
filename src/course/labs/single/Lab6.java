@@ -41,7 +41,7 @@ public class Lab6 {
     // Bonus, Not working
 
     static boolean reverse_match (String s) {
-        return s.matches("\\b(\\w+)\\s+$(\\1)^");
+        return s.matches("\\b(\\w+)\\s+^(?=(\\1\\G))$");
     }
 
     public static void main(String[] args) {
